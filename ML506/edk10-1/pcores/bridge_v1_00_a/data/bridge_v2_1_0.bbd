@@ -1,0 +1,9 @@
+##############################################################################
+## Filename:          C:\ML505\Tutorials\AEBridge\pcores/bridge_v1_00_a/data/bridge_v2_1_0.bbd
+## Description:       Black Box Definition
+## Date:              Wed Sep 23 11:31:13 2009 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+Files
+################################################################################
+fifo_16b_to_32b.ngc,fifo_32b_to_16b.ngc

@@ -1,0 +1,53 @@
+#################################################################################
+##
+##      Project:  Aurora Module Generator version 2.8
+##
+##         Date:  $Date: 2007/08/08 11:13:33 $
+##          Tag:  $Name: i+IP+144838 $
+##         File:  $RCSfile: aurora_gtp_ucf.ejava,v $
+##          Rev:  $Revision: 1.1.2.1 $
+##
+##      Company:  Xilinx
+##
+##   Disclaimer:  XILINX IS PROVIDING THIS DESIGN, CODE, OR
+##                INFORMATION "AS IS" SOLELY FOR USE IN DEVELOPING
+##                PROGRAMS AND SOLUTIONS FOR XILINX DEVICES.  BY
+##                PROVIDING THIS DESIGN, CODE, OR INFORMATION AS
+##                ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
+##                APPLICATION OR STANDARD, XILINX IS MAKING NO
+##                REPRESENTATION THAT THIS IMPLEMENTATION IS FREE
+##                FROM ANY CLAIMS OF INFRINGEMENT, AND YOU ARE
+##                RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY
+##                REQUIRE FOR YOUR IMPLEMENTATION.  XILINX
+##                EXPRESSLY DISCLAIMS ANY WARRANTY WHATSOEVER WITH
+##                RESPECT TO THE ADEQUACY OF THE IMPLEMENTATION,
+##                INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
+##                REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE
+##                FROM CLAIMS OF INFRINGEMENT, IMPLIED WARRANTIES
+##                OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+##                PURPOSE.
+##
+##                (c) Copyright 2004 Xilinx, Inc.
+##                All rights reserved.
+##
+#################################################################################
+##
+##  aurora_201_ucf
+##
+##
+##  Description: This is the user constraints file for a 1 lane Aurora
+##               core.
+##
+##              *   Supports Virtex-5 Devices 
+##
+##
+
+#User Clock contraint
+NET USER_CLK PERIOD = 16.0 ns;
+
+# Reference clock contraint for GTPs
+NET GTPD1_left_i PERIOD = 8.0 ns;
+
+########### Location of GTP for LX50T on ML523 ###################
+ INST aurora_module_i/gtp_wrapper_i/GTP_DUAL_INST LOC=GTP_DUAL_X0Y1;
+

@@ -1,0 +1,77 @@
+#################################################################################
+##
+##      Project:  Aurora Module Generator version 2.8
+##
+##         Date:  $Date: 2007/08/08 11:13:33 $
+##          Tag:  $Name: i+IP+144838 $
+##         File:  $RCSfile: aurora_example_gtp_ucf.ejava,v $
+##          Rev:  $Revision: 1.1.2.1 $
+##
+##      Company:  Xilinx
+##
+##   Disclaimer:  XILINX IS PROVIDING THIS DESIGN, CODE, OR
+##                INFORMATION "AS IS" SOLELY FOR USE IN DEVELOPING
+##                PROGRAMS AND SOLUTIONS FOR XILINX DEVICES.  BY
+##                PROVIDING THIS DESIGN, CODE, OR INFORMATION AS
+##                ONE POSSIBLE IMPLEMENTATION OF THIS FEATURE,
+##                APPLICATION OR STANDARD, XILINX IS MAKING NO
+##                REPRESENTATION THAT THIS IMPLEMENTATION IS FREE
+##                FROM ANY CLAIMS OF INFRINGEMENT, AND YOU ARE
+##                RESPONSIBLE FOR OBTAINING ANY RIGHTS YOU MAY
+##                REQUIRE FOR YOUR IMPLEMENTATION.  XILINX
+##                EXPRESSLY DISCLAIMS ANY WARRANTY WHATSOEVER WITH
+##                RESPECT TO THE ADEQUACY OF THE IMPLEMENTATION,
+##                INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OR
+##                REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE
+##                FROM CLAIMS OF INFRINGEMENT, IMPLIED WARRANTIES
+##                OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+##                PURPOSE.
+##
+##                (c) Copyright 2004 Xilinx, Inc.
+##                All rights reserved.
+##
+#################################################################################
+##
+##  AURORA_SAMPLE_UCF
+##
+##
+##  Description: This is the user constraints file for a 1 lane Aurora
+##               core. This module supports the following features:
+##
+##              *   Supports GTP on an ML523 evaluation board
+##
+##
+################################ CLOCK CONSTRAINTS ##############################
+# User Clock Contraint: the value is selected based on the line rate of the module
+NET user_clk_i PERIOD = 16.0  ns;
+# Sync Clock Constraint
+NET sync_clk_i PERIOD = 8.0 ns;
+# Reference clock contraint for GTPs
+NET gtpd1_left_i PERIOD = 8.0 ns;
+# Drp Clock Constraint  
+NET init_clk_i PERIOD = 20 ns;
+################################ Init Clock Constraint ##########################
+NET INIT_CLK        LOC=AG21;   #50 Mhz Oscillator
+################ GTP CLOCK Locations of the pins for an ML523 board##############
+NET GTPD1_P  LOC=AF4; # J37 on Board
+NET GTPD1_N  LOC=AF3; # J28 on Board
+################################ Resets Buttons #################################
+NET RESET             LOC=AF13;   #BUTTON
+NET RESET             PULLUP;
+NET PMA_INIT          LOC=AE23;   #BUTTON
+################################ Errors Indicators ##############################
+NET HARD_ERROR        LOC=AF25;     #LED
+NET SOFT_ERROR        LOC=AF26;     #LED
+NET FRAME_ERROR       LOC=AG27;     #LED
+################################ Channel and Lane up Indicators #################
+#This board supports a maximum of 12 lanes
+NET CHANNEL_UP        LOC=AE26;       #LED
+NET LANE_UP           LOC=AJ25;      #LED
+##########################  Location of GTP on ML523 ############################
+# X0Y0 -> Tile #122 on Board
+# X0Y1 -> Tile #118 on Board
+# X0Y2 -> Tile #114 on Board
+# X0Y3 -> Tile #112 on Board
+# X0Y4 -> Tile #116 on Board
+# X0Y5 -> Tile #120 on Board
+INST aurora_module_i/gtp_wrapper_i/GTP_DUAL_INST LOC=GTP_DUAL_X0Y1;

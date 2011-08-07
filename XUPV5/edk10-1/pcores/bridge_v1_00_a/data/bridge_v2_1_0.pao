@@ -1,0 +1,49 @@
+##############################################################################
+## Filename:          C:\ML505\Tutorials\AEBridge\pcores/bridge_v1_00_a/data/bridge_v2_1_0.pao
+## Description:       Peripheral Analysis Order
+## Date:              Wed Sep 23 11:31:13 2009 (by Create and Import Peripheral Wizard)
+##############################################################################
+
+lib proc_common_v2_00_a proc_common_pkg vhdl
+lib proc_common_v2_00_a ipif_pkg vhdl
+lib proc_common_v2_00_a or_muxcy vhdl
+lib proc_common_v2_00_a or_gate128 vhdl
+lib proc_common_v2_00_a family_support vhdl
+lib proc_common_v2_00_a pselect_f vhdl
+lib proc_common_v2_00_a counter_f vhdl
+lib plbv46_slave_single_v1_00_a plb_address_decoder vhdl
+lib plbv46_slave_single_v1_00_a plb_slave_attachment vhdl
+lib plbv46_slave_single_v1_00_a plbv46_slave_single vhdl
+lib bridge_v1_00_a aurora_201_aurora_lane vhdl
+lib bridge_v1_00_a aurora_201_aurora_pkg vhdl
+lib bridge_v1_00_a aurora_201_channel_error_detect vhdl
+lib bridge_v1_00_a aurora_201_channel_init_sm vhdl
+lib bridge_v1_00_a aurora_201_chbond_count_dec vhdl
+lib bridge_v1_00_a aurora_201_error_detect vhdl
+lib bridge_v1_00_a aurora_201_global_logic vhdl
+lib bridge_v1_00_a aurora_201_gtp_wrapper vhdl
+lib bridge_v1_00_a aurora_201_idle_and_ver_gen vhdl
+lib bridge_v1_00_a aurora_201_lane_init_sm vhdl
+lib bridge_v1_00_a aurora_201_rx_ll vhdl
+lib bridge_v1_00_a aurora_201_rx_ll_pdu_datapath vhdl
+lib bridge_v1_00_a aurora_201_sym_dec vhdl
+lib bridge_v1_00_a aurora_201_sym_gen vhdl
+lib bridge_v1_00_a aurora_201_tx_ll vhdl
+lib bridge_v1_00_a aurora_201_tx_ll_control vhdl
+lib bridge_v1_00_a aurora_201_tx_ll_datapath vhdl
+lib bridge_v1_00_a aurora_201_standard_cc_module vhdl
+lib bridge_v1_00_a aurora_201_clock_module vhdl
+lib bridge_v1_00_a aurora_201 vhdl
+lib bridge_v1_00_a v5_emac_v1_5 vhdl
+lib bridge_v1_00_a rx_elastic_buffer vhdl
+lib bridge_v1_00_a gtp_dual_1000X vhdl
+lib bridge_v1_00_a rocketio_wrapper_gtp vhdl
+lib bridge_v1_00_a rocketio_wrapper_gtp_tile vhdl
+lib bridge_v1_00_a v5_emac_v1_5_block vhdl
+lib bridge_v1_00_a tx_client_fifo_8 vhdl
+lib bridge_v1_00_a rx_client_fifo_8 vhdl
+lib bridge_v1_00_a eth_fifo_8 vhdl
+lib bridge_v1_00_a v5_emac_v1_5_locallink vhdl
+lib bridge_v1_00_a address_swap_module_8 vhdl
+lib bridge_v1_00_a user_logic vhdl
+lib bridge_v1_00_a bridge vhdl
